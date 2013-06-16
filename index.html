@@ -1,0 +1,23 @@
+---
+layout: default
+title: Coderuby
+permalink: /
+---
+
+<article>
+  <header>
+    <h1>
+      Hi, I'm Jiayi Zhao, <br>
+      Contact with some low-level stuff.<br>
+      {% for post in site.categories.note limit:1 %}
+        Latest - <a href="{{ site.base }}{{ post.url }}/" class=latest>{{ post.title }}</a>
+      {% endfor %}
+    </h1>
+
+    {% if site.availability == 'free' %}
+      <small class="status available"><a href="mailto:{{ site.email }}">If you have questions, please contact me.</a></small>
+    {% else %}
+      <small class="status unavailable"><a href="mailto:{{ site.email }}" title="You think your project is great? try to reach me.">I’m currently not accepting freelance work</a></small>
+    {% endif %}
+  </header>
+</article>

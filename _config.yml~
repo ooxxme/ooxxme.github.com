@@ -1,0 +1,41 @@
+#
+# Jekyll basic configurations
+#
+
+destination:  ./_site
+timezone:     Asia/Hong_Kong
+permalink:    /:categories/:title
+markdown:     rdiscount
+
+#
+# Jekyll serve settings
+#
+
+port:         4000
+
+#
+# Jekyll build settings
+#
+
+future:       false
+
+#
+# Custom site settings
+#
+
+domain:       coderuby.info # In atom feed in `id` tag
+url:          http://coderuby.info # In atom feed and sitemap
+css:          css # Specify CSS path in templates
+feed:         feed # Since I use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error
+name:         Coderuby
+user:         Jiayi Zhao
+email:        jiayizhao@live.com
+slogan:       Contact with some low-level stuff.
+twitter:      dianshu
+availability: free # In homepage
+base:         "" # Example: /lab/version/21 without trailing slash
+
+
+deploy:
+  repository: git@github.com:ooxxme/ooxxme.github.com.git
+  branch: master

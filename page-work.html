@@ -1,0 +1,24 @@
+---
+layout: page
+title: Work
+permalink: /work/
+desc: 作品·ワークス·TBC
+---
+
+<div class=txt>
+  <h3>Personal Projects</h3>
+</div>
+<ul class=list>
+  {% for post in site.tags.project %}
+    {% include list-item.html %}
+  {% endfor %}
+</ul>
+
+<div class=txt>
+  <h3>Web Designs / App Designs / Print Designs</h3>
+</div>
+<ul class=list>
+  {% for post in site.tags.design %}
+    {% include list-item.html %}
+  {% endfor %}
+</ul>
